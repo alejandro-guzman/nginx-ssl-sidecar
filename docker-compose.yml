@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+    - sidecar-app
+  sidecar:
+    image: nginx
+    depends_on:
+    - app
+    volumes:
+    - ./etc/nginx/conf.d:/etc/nginx/conf.d
+    - ./etc/ssl:/etc/ssl
+    ports:
+    - 8080:80
+    - 8443:443
+    networks:
+    - sidecar-app
+    - external
+      
+networks:
+  sidecar-app:
+  external:
