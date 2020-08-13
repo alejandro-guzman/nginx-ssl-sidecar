@@ -1,4 +1,6 @@
-# Generate certificate
+# Generate server certificate
+
+> Warning: These certificates are not safe for production
 
 ## generate csr and key with openssl
 
