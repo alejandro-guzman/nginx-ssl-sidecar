@@ -18,7 +18,7 @@ setup(
         'console_scripts': ['simple-api=simpleapi.app:main'],
     },
     project_urls={
-        'Source Code': 'https://github.com/alejandro-guzman/',
+        'Source Code': 'https://github.com/alejandro-guzman/nginx-ssl-sidecar',
     },
     python_requires='>=3.7'
 )
